@@ -1,1 +1,11 @@
 
+services:
+  dhcp-server:
+    build: .
+    container_name: kea-dhcp-server
+    network_mode: host
+    restart: always
+    volumes:
+      - ./kea-dhcp4.conf:/etc/kea/kea-dhcp4.conf
+      - ./supervisord.conf:/etc/supervisor/supervisord.conf
+      - /var/lib/kea:/var/lib/kea
