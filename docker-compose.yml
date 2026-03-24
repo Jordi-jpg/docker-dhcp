@@ -6,7 +6,7 @@ services:
     container_name: dk-kea-DHCP-SERVER01
     networks:
       kea-10-ipvlan: # network that binds container to host network interface.
-        ipv4_address: 10.18.71.66 # ip for kea4 server
+        ipv4_address: 10.18.70.66 # ip for kea4 server
     ports:
       - 67:67/udp
       - 67:67/tcp
@@ -24,4 +24,4 @@ networks:
     enable_ipv6: true
     ipam:
       config:
-        - subnet: 10.18.71.64/27
+        - subnet: 10.18.70.64/26
