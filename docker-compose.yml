@@ -12,9 +12,9 @@ services:
       - 67:67/tcp
       - 8000:8000/tcp
     volumes:
-      - ./kea-dhcp4.conf:/etc/kea/kea-dhcp4.conf
-      - ./supervisord.conf:/etc/supervisor/supervisord.conf
-      - /var/lib/kea:/var/lib/kea
+      - ./etc/kea:/etc/kea:rw
+      - ./etc/supervisor:/etc/supervisor:rw
+      - ./var/lib/kea:/var/lib/kea:rw
 networks:
   kea-10-ipvlan: # network that binds container to host network interface.
     name: kea-10-ipvlan
