@@ -2,7 +2,7 @@ services:
   dhcp-hospitalbinissalem:
     build:
       context: ..
-      dockerfile: dhcp.Dockerfile
+      dockerfile: Dockerfile
     container_name: dk-kea-DHCP-SERVER01
     networks:
       kea-10-ipvlan: # network that binds container to host network interface.
