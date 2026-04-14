@@ -1,7 +1,7 @@
 services:
   dhcp-hospitalbinissalem:
     build:
-      context: ..
+      context: .
       dockerfile: Dockerfile
     container_name: dk-kea-DHCP-SERVER01
     networks:
