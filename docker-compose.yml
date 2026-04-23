@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: dk-kea-DHCP-SERVER01
+    privileged: true
     networks:
       kea-10-ipvlan: # network that binds container to host network interface.
         ipv4_address: 10.18.70.66 # ip for kea4 server
